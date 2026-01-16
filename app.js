@@ -76,13 +76,13 @@ function triangleDefiner(s1 = 0, s2 = 0, s3 = 0){
 //Exercise 5 Section
 console.log("EXERCISE 5:\n============\n");
 function dataPlan(planLimit = 0, day = 1, usage = 0){
-    let PredictedAvg = planLimit / 30;
+    let predictedAvg = planLimit / 30;
     let actualAvg = usage / day;
     let dataLeft = planLimit - usage;
     console.log(`${day} days used, ${30 - day} days remaining`);
-    console.log(`Average daily use: ${actualAvg} GB/day`);
-    if (actualAvg > PredictedAvg){
-        console.log(`You are EXCEEDING your average daily use (${PredictedAvg} GB/day),`);
+    console.log(`Average daily use: ${predictedAvg} GB/day`);
+    if (actualAvg > predictedAvg){
+        console.log(`You are EXCEEDING your average daily use (${actualAvg} GB/day),`);
         if (usage > planLimit){
             console.log(`You have already exceeded your data plan for this month.`);
         }
@@ -92,8 +92,8 @@ function dataPlan(planLimit = 0, day = 1, usage = 0){
             console.log(`To stay below your data plan, use no more than ${dataLeft / (30 - day)} GB/day`)
         }
     }
-    else if (actualAvg < PredictedAvg) {
-        console.log(`You are using less than your predicted average daily use (${PredictedAvg} GB/day),`);
+    else if (actualAvg < predictedAvg) {
+        console.log(`You are using less than your average daily use (${actualAvg} GB/day),`);
         console.log("continuing this low usage, you'll be under you data plan limit by");
         console.log(`${planLimit - (actualAvg * 30.000)} GB`);
         console.log(`To reach your data plan limit, you can use up to ${dataLeft / (30 - day)} GB/day`)

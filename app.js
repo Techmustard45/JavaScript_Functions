@@ -80,7 +80,7 @@ function dataPlan(planLimit = 0, day = 1, usage = 0){
     let actualAvg = usage / day;
     let dataLeft = planLimit - usage;
     console.log(`${day} days used, ${30 - day} days remaining`);
-    console.log(`Average daily use: ${predictedAvg} GB/day`);
+    console.log(`Plan avg: ${predictedAvg.toFixed(2)} GB/day | Your avg: ${actualAvg.toFixed(2)} GB/day`);
     if (actualAvg > predictedAvg){
         console.log(`You are EXCEEDING your average daily use (${actualAvg} GB/day),`);
         if (usage > planLimit){
